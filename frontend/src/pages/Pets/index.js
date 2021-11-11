@@ -112,7 +112,7 @@ export default function Pets() {
 
 
                             <Row form>
-                                <Col md={6}>
+                                <Col md={4}>
                                     <FormGroup>
                                         <Label for="raca">
                                             Raça do pet
@@ -139,7 +139,7 @@ export default function Pets() {
                                             onChange={onChange} value={pet.tamanho}
                                         >
                                             <option value="Pequeno">Pequeno</option>
-                                            <option value="Medio">Medio</option>
+                                            <option value="Médio">Médio</option>
                                             <option value="Grande">Grande</option>
 
                                         </select>
@@ -166,7 +166,7 @@ export default function Pets() {
                             <thead>
                                 <tr>
                                     <th></th>
-                                    <th>Foto<span class="icon">
+                                    <th>Id do dono<span class="icon">
                                         <i class="fas fa-arrow-down"></i>
                                     </span>
                                     </th>
@@ -196,13 +196,13 @@ export default function Pets() {
                                         <td>
                                             <input class="margin-text" type="checkbox" id="checkboxNoLabel" value={() => handleDelete(pets.id)} aria-label="..." />
                                         </td>
-                                        <td><p class="margin-text">{pets.imagem}</p></td>
+                                        <td><p class="margin-text">{pets.idUsuario}</p></td>
                                         <td><p class="margin-text">{pets.nome}</p></td>
                                         <td><p class="margin-text">{pets.raca}</p></td>
                                         <td><p class="margin-text">{pets.tamanho}</p></td>
 
                                         <td><Link class="btn btn-link" to={`/pets/update/${pets.id}`} type="button">Editar</Link>
-                                            <button class="btn btn-link" onClick={() => handleDelete(pets.id)} type="button">Ver</button>
+                                            <Link class="btn btn-link" to={`/pets/ver/${pets.id}`} type="button">Ver</Link>
                                             <button class="btn btn-link" onClick={() => handleDelete(pets.id)} type="button">Deletar</button>
 
                                         </td>
@@ -212,7 +212,7 @@ export default function Pets() {
                             </tbody>
 
                         </Table>
-                        
+
                     </div>
                 </div>
             </div>

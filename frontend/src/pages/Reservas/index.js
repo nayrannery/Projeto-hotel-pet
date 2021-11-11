@@ -63,6 +63,10 @@ export default function Reserva() {
         })
     }
 
+    function limpar(){
+
+    }
+
     return (
 
         <div class="container">
@@ -86,7 +90,6 @@ export default function Reserva() {
                 <i class="fas fa-user-plus"></i>
             </span></Link>
             <br></br>
-
 
             <Form >
                 <Row form>
@@ -162,10 +165,11 @@ export default function Reserva() {
                     <span class="icon text-blue">
                         <i class=" fas fa-search"></i>
                     </span> Pesquisar </button>
-                <Link className="btn btn-outline-primary btn-space" to="/">
+                <button className="btn btn-outline-primary btn-space" type="reset">
                     <span class="icon text-blue">
                         <i class="fas fa-undo-alt"></i>
-                    </span>Limpar</Link>
+                    </span>Limpar</button>
+                    
             </Form>
 
             <br></br><br></br>
@@ -220,7 +224,7 @@ export default function Reserva() {
                             <td><p class="margin-text">{reserva.statusReserva}</p></td>
                             <td><p class="margin-text">{reserva.valorTotal}</p></td>
                             <td><Link class="btn btn-link" to={`/reservas/update/${reserva.id}`} type="button">Editar</Link>
-                                <button class="btn btn-link" onClick={() => handleDelete(reserva.id)} type="button">Ver</button>
+                            <Link class="btn btn-link" to={`/reservas/ver/${reserva.id}`} type="button">Ver</Link>
                                 <button class="btn btn-link" onClick={() => handleDelete(reserva.id)} type="button">Deletar</button>
                             </td>
                         </tr>

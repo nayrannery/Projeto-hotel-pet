@@ -178,27 +178,27 @@ export default function User() {
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Foto<span class="icon">
+                        <th>&nbsp;Id<span class="icon">
                             <i class="fas fa-arrow-down"></i>
                         </span>
                         </th>
-                        <th>Email<span class="icon">
+                        <th>&nbsp;Email<span class="icon">
                             <i class="fas fa-arrow-down"></i>
                         </span>
                         </th>
-                        <th>Nome<span class="icon">
+                        <th>&nbsp;Nome<span class="icon">
                             <i class="fas fa-arrow-down"></i>
                         </span>
                         </th>
-                        <th>Função<span class="icon">
+                        <th>&nbsp;Função<span class="icon">
                             <i class="fas fa-arrow-down"></i>
                         </span>
                         </th>
-                        <th>Status<span class="icon">
+                        <th>&nbsp;Status<span class="icon">
                             <i class="fas fa-arrow-down"></i>
                         </span>
                         </th>
-                        <th>Criado em<span class="icon">
+                        <th>&nbsp;Criado em<span class="icon">
                             <i class="fas fa-arrow-down"></i>
                         </span></th>
                         <th>
@@ -213,14 +213,14 @@ export default function User() {
                         <td>
                             <input  class="margin-text" type="checkbox" id="checkboxNoLabel"  onChange={onChange}   aria-label="..." />
                         </td>
-                        <td><p class="margin-text">{user.imagem}</p></td>
+                        <td><p class="margin-text">{user.id}</p></td>
                         <td><p class="margin-text">{user.email}</p></td>
                         <td><p class="margin-text">{user.nome}</p></td>
                         <td><p class="margin-text">{user.funcao}</p></td>
                         <td><p class="margin-text">{user.statusUsuario}</p></td>
                         <td><p class="margin-text">{user.dataCriacao}</p></td>
                         <td><Link class="btn btn-link" to={`/update/${user.id}`} type="button">Editar</Link>
-                        <button class="btn btn-link" onClick={()=>handleDelete(user.id)} type="button">Ver</button>
+                        <Link  class="btn btn-link" to={`/ver/${user.id}`} type="button">Ver</Link>
                             <button class="btn btn-link" onClick={()=>handleDelete(user.id)} type="button">Deletar</button>
                         </td>
                         
