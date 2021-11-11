@@ -8,18 +8,21 @@ const ReservasController = require('./controller/ReservasControler');
 routes.get('/users',UserController.list);
 routes.get('/users/:id',UserController.show);
 routes.post('/users',UserController.create);  
+routes.post('/users/pesquisar',UserController.search);  
 routes.put('/users/:id',UserController.update);
 routes.delete('/users/:id',UserController.delete);
 
 routes.get('/pets',PetsController.list);
 routes.get('/pets/:id',PetsController.show);
 routes.post('/pets',PetsController.create);  
+routes.post('/pets/pesquisar',PetsController.search);  
 routes.put('/pets/:id',PetsController.update);
 routes.delete('/pets/:id',PetsController.delete);
 
 routes.get('/reserva',ReservasController.list);
 routes.get('/reserva/:id',ReservasController.show);
 routes.post('/reserva',ReservasController.create);  
+routes.post('/reserva/pesquisar',ReservasController.search);  
 routes.put('/reserva/:id',ReservasController.update);
 routes.delete('/reserva/:id',ReservasController.delete);
 

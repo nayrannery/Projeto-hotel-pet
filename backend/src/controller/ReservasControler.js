@@ -75,5 +75,16 @@ module.exports = {
 
         return res.status(204).send();     
 
-    }
+    },
+
+    async search(req, res) {
+        const { id, idUsuario, idPets, dataChegada, dataPartida, statusReserva } = req.body;
+        const reserva = await connection('reserva').where('id', 'like', `%${id || ''}%`)
+            .where('idUsuario', 'like', `%${idUsuario || ''}%`)
+            .where('idPets', 'like', `%${idPets || ''}%`)
+            .where('dataChegada', 'like', `%${dataChegada || ''}%`)
+            .where('dataPartida', 'like', `%${dataPartida || ''}%`)
+            .where('statusReserva', 'like', `%${statusReserva || ''}%`)
+        res.json(reserva);
+    },
 }

@@ -58,5 +58,14 @@ module.exports = {
 
         return res.status(204).send();     
 
-    }
+    },
+
+    async search(req, res) {
+        const { idUsuario, nome, raca, tamanho } = req.body;
+        const pets = await connection('pets').where('nome', 'like', `%${nome || ''}%`)
+            .where('idUsuario', 'like', `%${idUsuario || ''}%`)            
+            .where('raca', 'like', `%${raca || ''}%`)
+            .where('tamanho', 'like', `%${tamanho || ''}%`)
+        res.json(pets);
+    },
 }
