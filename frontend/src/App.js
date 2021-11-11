@@ -4,8 +4,6 @@ import User from './pages/User';
 import Routes from './routes'
 
 function App() {
-  
-  
 
   return (   
   

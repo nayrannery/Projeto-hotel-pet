@@ -64,11 +64,28 @@ export default function Reserva() {
     }
 
     return (
-        <div id="user-container">
+
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Reservas</li>
+                </ol>
+            </nav>
+
+            <div class="card shadow mb-12">
+                <div class="card-header py-3">
+                    <h2 class="m-0 font-weight-bold text-primary" >Reservas</h2>
+                </div>
+                
+                <div class="card-body">
+                    <div class="container">
+            
 
             <Link class="btn btn-outline-primary  btn-space" id="create-link" to={"/reservas/create"}>Novo<span class="icon text-blue">
                 <i class="fas fa-user-plus"></i>
             </span></Link>
+            <br></br>
 
 
             <Form >
@@ -210,6 +227,9 @@ export default function Reserva() {
                     ))}
                 </tbody>
             </Table>
+        </div>
+        </div>
+        </div>
         </div>
     );
 }

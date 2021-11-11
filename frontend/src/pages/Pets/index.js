@@ -57,152 +57,165 @@ export default function Pets() {
 
     return (
 
-        <div id="user-container">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Pets</li>
+                </ol>
+            </nav>
 
-            <Link class="btn btn-outline-primary  btn-space" id="create-link" to={"/pets/create"}>Novo<span class="icon text-blue">
-                <i class="fas fa-user-plus"></i>
-            </span></Link>
+            <div class="card shadow mb-12">
+                <div class="card-header py-3">
+                    <h2 class="m-0 font-weight-bold text-primary" >Pets</h2>
+                </div>
 
-            <Form >
-                <Row form>
-                    <Col md={6}>
-                        <FormGroup>
-                            <Label for="idUsuario">
-                                Id do Proprietário
-                            </Label>
-                            <Input
-                                id="idUsuario"
-                                name="idUsuario"
-                                placeholder=""
-                                type=""
-                                onChange={onChange} value={pet.idUsuario}
+                <div class="card-body">
+                    <div class="container">
 
-                            />
-                        </FormGroup>
-                    </Col>
-                    <Col md={6}>
-                        <FormGroup>
-                            <Label for="nome">
-                                Nome do pet
-                            </Label>
-                            <Input
-                                id="nome"
-                                name="nome"
-                                placeholder=""
-                                onChange={onChange} value={pet.nome}
-                            />
-                        </FormGroup>
+                        <Link class="btn btn-outline-primary  btn-space" id="create-link" to={"/pets/create"}>Novo<span class="icon text-blue">
+                            <i class="fas fa-user-plus"></i>
+                        </span></Link>
+                        <br></br>
+                        <Form >
+                            <Row form>
+                                <Col md={6}>
+                                    <FormGroup>
+                                        <Label for="idUsuario">
+                                            Id do Proprietário
+                                        </Label>
+                                        <Input
+                                            id="idUsuario"
+                                            name="idUsuario"
+                                            placeholder=""
+                                            type=""
+                                            onChange={onChange} value={pet.idUsuario}
 
-                    </Col>
-                </Row>
+                                        />
+                                    </FormGroup>
+                                </Col>
+                                <Col md={6}>
+                                    <FormGroup>
+                                        <Label for="nome">
+                                            Nome do pet
+                                        </Label>
+                                        <Input
+                                            id="nome"
+                                            name="nome"
+                                            placeholder=""
+                                            onChange={onChange} value={pet.nome}
+                                        />
+                                    </FormGroup>
 
-
-                <Row form>
-                    <Col md={6}>
-                        <FormGroup>
-                            <Label for="raca">
-                                Raça do pet
-                            </Label>
-                            <Input
-                                id="raca"
-                                name="raca"
-                                placeholder=""
-                                onChange={onChange} value={pet.raca}
-                            />
-                        </FormGroup>
-                    </Col>
+                                </Col>
+                            </Row>
 
 
-                    <Col md={4}>
-                        <FormGroup>
-                            <Label for="tamanho">
-                                Tamanho
-                            </Label>
-                            <select
-                                id="tamanho"
-                                name="tamanho"
-                                class="form-control"
-                                onChange={onChange} value={pet.tamanho}
-                            >
-                                <option value="Pequeno">Pequeno</option>
-                                <option value="Medio">Medio</option>
-                                <option value="Grande">Grande</option>
-
-                            </select>
-                        </FormGroup>
-                    </Col>
-                </Row>
-
-                <button className="btn btn-outline-primary btn-space" type="submit" onClick={pesquisar} >
-                    <span class="icon text-blue">
-                        <i class=" fas fa-search"></i>
-                    </span> Pesquisar </button>
-                <Link className="btn btn-outline-primary btn-space" to="/">
-                    <span class="icon text-blue">
-                        <i class="fas fa-undo-alt"></i>
-                    </span>Limpar</Link>
-            </Form>
-
-            <br></br><br></br>
-
-            <Table bordered
-
-                responsive
-                size="sm">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Foto<span class="icon">
-                            <i class="fas fa-arrow-down"></i>
-                        </span>
-                        </th>
-                        <th>Nome<span class="icon">
-                            <i class="fas fa-arrow-down"></i>
-                        </span>
-                        </th>
-                        <th>Raça<span class="icon">
-                            <i class="fas fa-arrow-down"></i>
-                        </span>
-                        </th>
-                        <th>Tamanho<span class="icon">
-                            <i class="fas fa-arrow-down"></i>
-                        </span>
-                        </th>
+                            <Row form>
+                                <Col md={6}>
+                                    <FormGroup>
+                                        <Label for="raca">
+                                            Raça do pet
+                                        </Label>
+                                        <Input
+                                            id="raca"
+                                            name="raca"
+                                            placeholder=""
+                                            onChange={onChange} value={pet.raca}
+                                        />
+                                    </FormGroup>
+                                </Col>
 
 
-                        <th>
-                        </th>
-                    </tr>
-                </thead>
+                                <Col md={4}>
+                                    <FormGroup>
+                                        <Label for="tamanho">
+                                            Tamanho
+                                        </Label>
+                                        <select
+                                            id="tamanho"
+                                            name="tamanho"
+                                            class="form-control"
+                                            onChange={onChange} value={pet.tamanho}
+                                        >
+                                            <option value="Pequeno">Pequeno</option>
+                                            <option value="Medio">Medio</option>
+                                            <option value="Grande">Grande</option>
+
+                                        </select>
+                                    </FormGroup>
+                                </Col>
+                            </Row>
+
+                            <button className="btn btn-outline-primary btn-space" type="submit" onClick={pesquisar} >
+                                <span class="icon text-blue">
+                                    <i class=" fas fa-search"></i>
+                                </span> Pesquisar </button>
+                            <button className="btn btn-outline-primary btn-space" type="reset">
+                                <span class="icon text-blue">
+                                    <i class="fas fa-undo-alt"></i>
+                                </span>Limpar</button>
+                        </Form>
+
+                        <br></br><br></br>
+
+                        <Table bordered
+
+                            responsive
+                            size="sm">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Foto<span class="icon">
+                                        <i class="fas fa-arrow-down"></i>
+                                    </span>
+                                    </th>
+                                    <th>Nome<span class="icon">
+                                        <i class="fas fa-arrow-down"></i>
+                                    </span>
+                                    </th>
+                                    <th>Raça<span class="icon">
+                                        <i class="fas fa-arrow-down"></i>
+                                    </span>
+                                    </th>
+                                    <th>Tamanho<span class="icon">
+                                        <i class="fas fa-arrow-down"></i>
+                                    </span>
+                                    </th>
 
 
-                <tbody>
-                    {pets.map(pets => (
-                        <tr>
-                            <td>
-                                <input class="margin-text" type="checkbox" id="checkboxNoLabel" value={() => handleDelete(pets.id)} aria-label="..." />
-                            </td>
-                            <td><p class="margin-text">{pets.imagem}</p></td>
-                            <td><p class="margin-text">{pets.nome}</p></td>
-                            <td><p class="margin-text">{pets.raca}</p></td>
-                            <td><p class="margin-text">{pets.tamanho}</p></td>
-
-                            <td><Link class="btn btn-link" to={`/pets/update/${pets.id}`} type="button">Editar</Link>
-                                <button class="btn btn-link" onClick={() => handleDelete(pets.id)} type="button">Ver</button>
-                                <button class="btn btn-link" onClick={() => handleDelete(pets.id)} type="button">Deletar</button>
-
-                            </td>
-
-                        </tr>
-                    ))}
-                </tbody>
+                                    <th>
+                                    </th>
+                                </tr>
+                            </thead>
 
 
-            </Table>
+                            <tbody>
+                                {pets.map(pets => (
+                                    <tr>
+                                        <td>
+                                            <input class="margin-text" type="checkbox" id="checkboxNoLabel" value={() => handleDelete(pets.id)} aria-label="..." />
+                                        </td>
+                                        <td><p class="margin-text">{pets.imagem}</p></td>
+                                        <td><p class="margin-text">{pets.nome}</p></td>
+                                        <td><p class="margin-text">{pets.raca}</p></td>
+                                        <td><p class="margin-text">{pets.tamanho}</p></td>
 
+                                        <td><Link class="btn btn-link" to={`/pets/update/${pets.id}`} type="button">Editar</Link>
+                                            <button class="btn btn-link" onClick={() => handleDelete(pets.id)} type="button">Ver</button>
+                                            <button class="btn btn-link" onClick={() => handleDelete(pets.id)} type="button">Deletar</button>
 
+                                        </td>
 
+                                    </tr>
+                                ))}
+                            </tbody>
 
+                        </Table>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
 
 

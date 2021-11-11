@@ -62,9 +62,21 @@ export default function User() {
     return (
             
 
-        <div id="user-container">
+        <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Usuários</li>
+            </ol>
+        </nav>
 
-          
+        <div class="card shadow mb-12">
+            <div class="card-header py-3">
+                <h2 class="m-0 font-weight-bold text-primary" >Usuários</h2>
+            </div>
+            
+            <div class="card-body">
+                <div class="container">          
 
             <Link class="btn btn-outline-primary  btn-space" id="create-link" to={"/create"}>Novo<span class="icon text-blue">
              <i class="fas fa-user-plus"></i>
@@ -218,6 +230,9 @@ export default function User() {
 
             </Table>          
 
+        </div>
+        </div>
+        </div>
         </div>
 
 

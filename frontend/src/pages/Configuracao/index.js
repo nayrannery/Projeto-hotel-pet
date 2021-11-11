@@ -45,12 +45,26 @@ export default function Configuracao() {
         console.log(configuracoes);
 
     }
-
      
 
     return (
                    
         <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Configuraçoes</li>
+            </ol>
+        </nav>
+
+        <div class="card shadow mb-12">
+            <div class="card-header py-3">
+                <h2 class="m-0 font-weight-bold text-primary" >Configurações</h2>
+            </div>
+            
+            <div class="card-body">
+                <div class="container">
+
             <Form onSubmit={onSubmit}>
                 <Row form>
                     <Col md={6}>
@@ -95,6 +109,9 @@ export default function Configuracao() {
                         <i class="fas fa-undo-alt"></i>
                     </span>Voltar</Link>
             </Form>     
+        </div>
+        </div>
+        </div>
         </div>
     );
 }

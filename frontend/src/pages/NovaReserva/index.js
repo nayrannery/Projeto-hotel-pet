@@ -64,144 +64,160 @@ export default function NovaReserva(props) {
 
 
     return (
-
-
         <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Nova Reserva</li>
+                </ol>
+            </nav>
 
-            <Form onSubmit={onSubmit}>
-                <Row form>
-                    <Col md={4}>
-                        <FormGroup>
-                            <Label for="nome">
-                                ID Proprietário
-                            </Label>
-                            <Input
-                                id="idUsuario"
-                                name="idUsuario"
-                                placeholder=""
-                                type=""
-                                onChange={onChange} value={reservas.idUsuario}
-                            />
-                        </FormGroup>
-                    </Col>
+            <div class="card shadow mb-12">
+                <div class="card-header py-3">
+                    <h2 class="m-0 font-weight-bold text-primary" >Nova Reserva</h2>
+                </div>
+                
+                <div class="card-body">
+                    <div class="container">
 
-                    <Col md={4}>
-                        <FormGroup>
-                            <Label for="idPets">
-                                ID Pet
-                            </Label>
-                            <Input
-                                id="idPets"
-                                name="idPets"
-                                placeholder=""
-                                type=""
-                                onChange={onChange} value={reservas.idPets}
-                            />
-                        </FormGroup>
-                    </Col>
-                    </Row>
-                    <Row form>
-                    <Col md={4}>
-                        <FormGroup>
-                            <Label for="dataChegada">
-                                Date
-                            </Label>
-                            <Input
-                                id="dataChegada"
-                                name="dataChegada"
-                                placeholder="date placeholder"
-                                type="date"
-                                onChange={onChange} value={reservas.dataChegada}
-                            />
-                        </FormGroup>
-                    </Col>
-                    <Col md={4}>
-                        <FormGroup>
-                            <Label for="dataSaida">
-                                Date
-                            </Label>
-                            <Input
-                                id="dataSaida"
-                                name="dataSaida"
-                                placeholder="date placeholder"
-                                type="date"
-                                onChange={onChange} value={reservas.dataPartida}
-                            />
-                        </FormGroup>
-                    </Col>
-                </Row>
-                <Row form>
-                    <Col md={4}>
-                        <FormGroup>
-                            <Label for="valorTotal">
-                                Valor Total
-                            </Label>
-                            <Input
-                                id="valorTotal"
-                                name="valorTotal"
-                                placeholder=""
-                                type=""
-                                onChange={onChange} value={reservas.valorTotal}
-                            />
-                        </FormGroup>
-                    </Col>
-                    <Col md={4}>
-                        <FormGroup>
-                            <Label for="statusReserva">
-                                Status
-                            </Label>
-                            <select
-                                id="statusReserva"
-                                name="statusReserva"
-                                class="form-control"
-                                onChange={onChange} value={reservas.statusReserva}>
-                                <option>Ativo</option>
-                                <option>Cancelado</option>
-                                <option>Finalizado</option>
-                            </select>
-                        </FormGroup>
-                    </Col>
-                </Row>
-                <Row form>
-                    <Col md={8}>
-                        <FormGroup>
-                            <Label for="notas">
-                            Notas
-                            </Label>
-                            <Input
-                                id="notas"
-                                name="notas"
-                                type="textarea"
-                                onChange={onChange} value={reservas.notas}>
-                            </Input>
-                        </FormGroup>
-                    </Col>
-                </Row>
-                <Row form>
-                    <Col md={8}>
-                        <FormGroup>
-                            <Label for="notasFuncionario">
-                            Notas
-                            </Label>
-                            <Input
-                                id="notasFuncionario"
-                                name="notasFuncionario"
-                                type="textarea"
-                                onChange={onChange} value={reservas.notasFuncionario}>
-                            </Input>
-                        </FormGroup>
-                    </Col>
-                </Row>
 
-                <button className="btn btn-outline-primary btn-space" type="submit" >
-                    <span class="icon text-blue">
-                        <i class=" fas fa-save"></i>
-                    </span> Salvar </button>
-                <Link className="btn btn-outline-primary btn-space" to="/">
-                    <span class="icon text-blue">
-                        <i class="fas fa-undo-alt"></i>
-                    </span>Voltar</Link>
-            </Form>
+                        <Form onSubmit={onSubmit}>
+                            <Row form>
+                                <Col md={4}>
+                                    <FormGroup>
+                                        <Label for="nome">
+                                            ID Proprietário
+                                        </Label>
+                                        <Input
+                                            id="idUsuario"
+                                            name="idUsuario"
+                                            placeholder=""
+                                            type=""
+                                            onChange={onChange} value={reservas.idUsuario}
+                                        />
+                                    </FormGroup>
+                                </Col>
+
+                                <Col md={4}>
+                                    <FormGroup>
+                                        <Label for="idPets">
+                                            ID Pet
+                                        </Label>
+                                        <Input
+                                            id="idPets"
+                                            name="idPets"
+                                            placeholder=""
+                                            type=""
+                                            onChange={onChange} value={reservas.idPets}
+                                        />
+                                    </FormGroup>
+                                </Col>
+                            </Row>
+                            <Row form>
+                                <Col md={4}>
+                                    <FormGroup>
+                                        <Label for="dataChegada">
+                                            Date
+                                        </Label>
+                                        <Input
+                                            id="dataChegada"
+                                            name="dataChegada"
+                                            placeholder="date placeholder"
+                                            type="date"
+                                            onChange={onChange} value={reservas.dataChegada}
+                                        />
+                                    </FormGroup>
+                                </Col>
+                                <Col md={4}>
+                                    <FormGroup>
+                                        <Label for="dataSaida">
+                                            Date
+                                        </Label>
+                                        <Input
+                                            id="dataSaida"
+                                            name="dataSaida"
+                                            placeholder="date placeholder"
+                                            type="date"
+                                            onChange={onChange} value={reservas.dataPartida}
+                                        />
+                                    </FormGroup>
+                                </Col>
+                            </Row>
+                            <Row form>
+                                <Col md={4}>
+                                    <FormGroup>
+                                        <Label for="valorTotal">
+                                            Valor Total
+                                        </Label>
+                                        <Input
+                                            id="valorTotal"
+                                            name="valorTotal"
+                                            placeholder=""
+                                            type=""
+                                            onChange={onChange} value={reservas.valorTotal}
+                                        />
+                                    </FormGroup>
+                                </Col>
+                                <Col md={4}>
+                                    <FormGroup>
+                                        <Label for="statusReserva">
+                                            Status
+                                        </Label>
+                                        <select
+                                            id="statusReserva"
+                                            name="statusReserva"
+                                            class="form-control"
+                                            onChange={onChange} value={reservas.statusReserva}>
+                                            <option>Ativo</option>
+                                            <option>Cancelado</option>
+                                            <option>Finalizado</option>
+                                        </select>
+                                    </FormGroup>
+                                </Col>
+                            </Row>
+                            <Row form>
+                                <Col md={8}>
+                                    <FormGroup>
+                                        <Label for="notas">
+                                            Notas
+                                        </Label>
+                                        <Input
+                                            id="notas"
+                                            name="notas"
+                                            type="textarea"
+                                            onChange={onChange} value={reservas.notas}>
+                                        </Input>
+                                    </FormGroup>
+                                </Col>
+                            </Row>
+                            <Row form>
+                                <Col md={8}>
+                                    <FormGroup>
+                                        <Label for="notasFuncionario">
+                                            Notas
+                                        </Label>
+                                        <Input
+                                            id="notasFuncionario"
+                                            name="notasFuncionario"
+                                            type="textarea"
+                                            onChange={onChange} value={reservas.notasFuncionario}>
+                                        </Input>
+                                    </FormGroup>
+                                </Col>
+                            </Row>
+
+                            <button className="btn btn-outline-primary btn-space" type="submit" >
+                                <span class="icon text-blue">
+                                    <i class=" fas fa-save"></i>
+                                </span> Salvar </button>
+                            <Link className="btn btn-outline-primary btn-space" to="/">
+                                <span class="icon text-blue">
+                                    <i class="fas fa-undo-alt"></i>
+                                </span>Voltar</Link>
+                        </Form>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
